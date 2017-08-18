@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	    <title>IndraCompany</title>
+	    <link href="css/bootstrap.min.css" rel="stylesheet"/>
+	</head>
+	<body>
+	    <div class="container">
+	        <div class="jumbotron" align="center" style="margin-top: 50px;">
+	            <h1>Seja bem vindo à IndraCompany</h1>
+	            <div align="center">
+	                <a href="listaCliente" class="btn btn-lg btn-primary" style="margin-top: 50px;">Lista Clientes</a>
+	            </div>
+	             <div align="center">
+	                <a href="cadastraCliente" class="btn btn-lg btn-primary" >Cadastre Clientes</a>
+	            </div>
+	        </div>
+	    </div>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <script src="js/bootstrap.min.js"></script>
+	</body>
+</html>

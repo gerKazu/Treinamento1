@@ -1,0 +1,24 @@
+package com.indracompany;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.indracompany.repository.ClienteRepository;
+
+@Controller
+public class FrontEndController {
+
+	@Autowired
+	private ClienteRepository repository;
+	
+	@RequestMapping("/")
+	public String index() {
+		return "index";
+	}
+	
+	@RequestMapping("SecondPage")
+	public String SecondPage() {
+		return "SecondPage";
+	}
+}

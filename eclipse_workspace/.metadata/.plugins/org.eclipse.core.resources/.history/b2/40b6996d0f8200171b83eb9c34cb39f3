@@ -1,0 +1,11 @@
+package com.indracompany;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class FrontEndController {
+
+		public String index() {
+			return "index";
+		}
+}

@@ -1,0 +1,35 @@
+package com.indracompany;
+
+import java.sql.*;
+import java.sql.SQLException;
+
+public class MainRunner {
+
+	public static void main(String[] args) throws Exception {
+		
+		createTable();
+	}	
+		
+	public static void createTable() throws Exception{
+			
+			OracleConn oracleConn = new OracleConn();
+			Connection conn = oracleConn.getConn();
+			try {
+				PreparedStatement create = conn.prepareStatement("CREATE TABLE IF NOT EXISTIS TB_JDBC (ID INT NOT NULL, FIRST VARCHAR2(255), LAST VARCHAR2(255), PRIMARY KEY(ID))");
+				create.executeUpdate();
+			} catch (SQLException e1) {
+				e1.printStackTrace(System.err);
+			}finally {
+				System.out.println("Function Completed!");
+			};
+			try {
+				conn.close();
+				System.out.println("conn closed...");
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+	
+		}
+}
+
+

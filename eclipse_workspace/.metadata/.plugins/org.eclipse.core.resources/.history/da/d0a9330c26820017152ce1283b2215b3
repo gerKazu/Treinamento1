@@ -1,0 +1,30 @@
+package com.indracompany;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.indracompany.repository.ClienteRepository;
+
+@Controller
+public class FrontEndController {
+
+	@Autowired
+	private ClienteRepository repository;
+	
+	@RequestMapping("/")
+	public String index() {
+		return "index";
+	}
+	
+	@RequestMapping("listaCliente")
+	public String listaCliente(Model model) {
+		
+		Iterable<Cliente> Clientes = repository.findAll();
+		
+		model.addAttribute("Clientes", Clientes);
+		
+		return "listaCliente";
+	}
+}

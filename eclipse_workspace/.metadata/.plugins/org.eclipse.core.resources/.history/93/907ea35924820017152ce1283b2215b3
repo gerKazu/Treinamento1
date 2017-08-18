@@ -1,0 +1,22 @@
+package com.indracompany;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity(name="TB_CLIENTE")
+public class Cliente {
+	
+	@Id
+	private Long id;
+	
+	private String nomeCliente;
+	
+	public Long getId() {
+		return id;
+	}
+	
+	public String getNomeCliente(){
+		return nomeCliente;
+	}
+
+}

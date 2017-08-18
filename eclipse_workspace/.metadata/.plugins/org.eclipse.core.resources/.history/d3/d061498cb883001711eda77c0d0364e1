@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<title>Clientes</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="findclient">
+		<form action="encontra" method="get">
+			<div class="form-group">
+				<label for="ID_CLIENTE">ID</label> <input type="text"
+					class="form-control" id="ID_CLIENTE" name="ID_CLIENTE"
+					placeholder="ID" />
+				<table id="showNome" class="table table-hover">
+					<thead>
+						<tr>
+							<th>NOME</th>
+						</tr>
+					</thead>
+					<tr th:each="Cliente : ${ClienteNome}">
+						<td><span th:text="${Cliente.NO_CLIENTE}"></span></td>
+					</tr>
+				</table>
+			</div>
+
+			<button type="encontra" class="btn btn-success">Encontrar</button>
+		</form>
+		<div align="center">
+			<a href="index" class="btn btn-lg btn-primary"
+				style="margin-top: 10px;">Inicio</a>
+		</div>
+	</div>
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,34 @@
+package com.indracompany;
+
+import java.sql.*;
+import java.sql.SQLException;
+
+public class MainRunner {
+
+	public static void main(String[] args) throws Exception {
+		
+		selectQuery();
+	}	
+		
+	public static void selectQuery() throws Exception{
+			
+			OracleConn oracleConn = new OracleConn();
+			Connection conn = oracleConn.getConn();
+			try {
+				Statement st = conn.createStatement();
+				String sql ="SELECT * FROM TB_SERVICO";
+				ResultSet rs = st.executeQuery(sql);
+				while(rs.next())
+					System.out.println(rs.getInt(1) +" "+ rs.getString(2));
+				conn.close();
+				System.out.println("conn closed...");
+			} catch (SQLException e1) {
+				e1.printStackTrace(System.err);
+			}finally {
+				System.out.println("Function Completed!");
+			};
+	
+		}
+}
+
+

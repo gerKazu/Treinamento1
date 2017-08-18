@@ -1,0 +1,47 @@
+package com.indracompany.model;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.NamedStoredProcedureQueries;
+import javax.persistence.NamedStoredProcedureQuery;
+
+@NamedStoredProcedureQueries({
+	@NamedStoredProcedureQuery(
+			name = "PR_RETORNA_SERVICO_ASSOC_CLIENTE",
+			procedureName = "test_pkg.PR_RETORNA_SERVICO_ASSOC_CLIENTE",
+					parameters = {
+                            @StoredProcedureParameter (mode = ParameterMode.IN, name = "NOME_CLIENTE_PARAM", type = Long.class),
+                            @StoredProcedureParameter(mode = ParameterMode.OUT, name = "NOME_SERVICO_RETURN", type = String.class)
+                         }
+			)
+
+})
+
+@Entity(name="TB_CLIENTE")
+public class Cliente {
+	
+	@Id
+	private Long ID_CLIENTE;
+	private String NO_CLIENTE;
+	
+	public Cliente() {
+		
+	}
+	
+	public Cliente(Long iD, String nome) {
+		super();
+		this.ID_CLIENTE = iD;
+		this.NO_CLIENTE = nome;
+		
+	}
+
+	public Long getID_CLIENTE() {
+		return ID_CLIENTE;
+	}
+	
+	public String getNO_CLIENTE(){
+		return  NO_CLIENTE;
+	}
+	
+
+}

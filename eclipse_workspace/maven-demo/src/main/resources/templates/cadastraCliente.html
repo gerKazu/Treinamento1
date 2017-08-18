@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1" />
+<title>Clientes</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+	<div id="cadastraCliente">
+		<form action="salvar" method="post">
+			<div class="form-group">
+				<label for="ID_CLIENTE">ID</label> <input type="text"
+					class="form-control" id="ID_CLIENTE" name="ID_CLIENTE" placeholder="ID" />
+			</div>
+				<div class="form-group">
+					<label for="NO_CLIENTE">CLIENTE</label>
+				    <input type="text"
+						class="form-control" id="NO_CLIENTE" name="NO_CLIENTE"
+						placeholder="Nome" />
+				</div>
+				<button type="salvar" class="btn btn-success">Cadastrar</button>
+		</form>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
+

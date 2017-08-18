@@ -1,0 +1,18 @@
+package com.indracompany;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class FrontEndController {
+
+	@RequestMapping("/")
+	public String index() {
+		return "index";
+	}
+	
+	@RequestMapping("SecondPage")
+	public String SecondPage() {
+		return "SecondPage";
+	}
+}

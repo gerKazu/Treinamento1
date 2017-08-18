@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>Clientes</title>
+</head>
+<body>
+	
+
+		<div id="listaCliente">
+    		<table class="table table-hover">
+        		<thead>
+        		<tr>
+            		<th>NOME</th>
+        		</tr>
+        		</thead>
+        		<tr th:each="Cliente : ${Cliente}">
+            		<td> <span th:text="${Cliente.NO_CLIENTE}"></span> </td>
+        		</tr>
+    		</table>
+
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	
+</body>
+</html>

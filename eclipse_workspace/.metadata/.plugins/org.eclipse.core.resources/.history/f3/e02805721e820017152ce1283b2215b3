@@ -1,0 +1,7 @@
+package com.indracompany.repository;
+
+import org.springFramework.data.repository.CrudRepository;
+
+public interface ClienteRepository extends CrudeRepository {
+
+}
