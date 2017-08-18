@@ -8,7 +8,7 @@
 	<body>
 	    <div class="container">
 	        <div class="jumbotron" align="center" style="margin-top: 50px;">
-	            <h1>Seja bem vindo à @IndraCompany</h1>
+	            <h1>Seja bem vindo à IndraCompany</h1>
 	            <div align="center">
 	                <a href="listaCliente" class="btn btn-lg btn-primary" >Lista Clientes</a>
 	            </div>
